@@ -54,7 +54,7 @@ class SetCreate extends Component {
         </CardSection>
         <Button
           title="Submit"
-          onPress= {this.props.handleSubmit(this.onSubmit)}
+          onPress= {() => console.log(this.state)}
         />
       </Card>
     )

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
@@ -13,24 +13,33 @@ import Historic from "./Reports/Historic";
 import MaxReps from "./Reports/MaxReps";
 import Menu from "./Reports/Menu";
 import Social from "./Reports/Social";
+import NavBar from "./Reports/NavBar";
+import GraphDash from "./Reports/GraphDash";
+//import BarChart from "./Reports/BarChart"
 
 
 import * as serviceWorker from "./serviceWorker";
 
 const routing = (
-  <Router>
-    <div>
-      <Route path="/" component={App} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={Signup} />
-      <Route path="/newset" component={NewSet} />
-      <Route path="/dashboard" component={Dashboard} />
-      <Route path="/graphs" component={Graphs} />
-      <Route path="/history" component={Historic} />
-      <Route path="/maxreps" component={MaxReps} />
-      <Route path="/social" component={Social} />
-    </div>
-  </Router>
+  <div>
+    <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={App} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/signup" exact component={Signup} />
+          <Route path="/newset" exact component={NewSet} />
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/graphs" exact component={Graphs} />
+          <Route path="/graphdash" exact component={GraphDash} />
+          <Route path="/history" exact component={Historic} />
+          <Route path="/maxreps" exact component={MaxReps} />
+          <Route path="/social" exact component={Social} />
+        </Switch>
+      </div>
+    </Router>
+  </div>
 );
 
 ReactDOM.render(routing, document.getElementById("root"));

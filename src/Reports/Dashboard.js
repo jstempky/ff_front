@@ -12,8 +12,8 @@ import icon_Social from "../resources/icon_Social.png";
 import logo from "../resources/logo.png";
 
 class Dashboard extends Component {
-  navigateToGraphs = () => {
-    this.props.history.push("/graphs");
+  navigateToGraphDash = () => {
+    this.props.history.push("/graphdash");
   };
 
   navigateToHistory = () => {

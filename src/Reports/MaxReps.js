@@ -13,7 +13,7 @@ class MaxReps extends Component {
     if (window.location.pathname ==="/maxreps") {
       return (
         <div
-          className="maxRepsTable"
+          className="maxRepsContainer"
         >
           <h1>Deadlift</h1>
           <table>

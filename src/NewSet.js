@@ -24,11 +24,23 @@ class NewSet extends Component {
   render() {
     return (
       <div
-        className="newSetInput"
+        className="newSetContainer"
       >
-        <input placeholder="Exercise" value={this.state.Exercise} />
-        <input placeholder="Weight" value={this.state.Weight} />
-        <input placeholder="Reps" value={this.state.Reps} />
+        <input
+          className="newSetField"
+          placeholder="Exercise"
+          value={this.state.Exercise}
+        />
+        <input
+          className="newSetField"
+          placeholder="Weight"
+          value={this.state.Weight}
+        />
+        <input
+          className="newSetField"
+          placeholder="Reps"
+          value={this.state.Reps}
+        />
         <button type="submit" color="yellow" className="newSetSubmitButton" onClick={this.navigateToSocial}>
           Submit!
         </button>

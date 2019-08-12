@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
+import "../App.css"
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -10,26 +12,50 @@ class Login extends Component {
     };
   }
 
+  navigateToDashboard = () => {
+    this.props.history.push("/dashboard");
+  }
+
+  navigateToSignUp = () => {
+    this.props.history.push("/signup");
+  }
+
   submit = () => {
     this.props.history.push("/");
   };
 
   render() {
     return (
-      <div>
-        <input placeholder="Email" value={this.state.email} />
+      <div
+        className="loginContainer"
+      >
         <input
+          className="loginField"
+          placeholder="Email" value={this.state.email} />
+
+        <input
+          className="loginField"
           placeholder="Password"
           type="password"
           value={this.state.password}
         />
-        <button type="submit" onClick={this.navigateToSocial}>
-          {" "}
-          Login!{" "}
+        <button
+          className="loginButton"
+          type="submit"
+          onClick={this.navigateToDashboard}>
+          Login!
         </button>
-        <button type="submit" onClick={this.navigateToSocial}>
-          {" "}
-          Forgot Password{" "}
+        <button
+          className="forgetPasswordButton"
+          type="submit"
+          onClick={this.navigateToDashboard}>
+          Forgot Password
+        </button>
+        <button
+          className="signUpButton"
+          type="submit"
+          onClick={this.navigateToSignUp}>
+          Join FitFort!
         </button>
       </div>
     );

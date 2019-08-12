@@ -11,19 +11,42 @@ class Login extends Component {
   }
 
   submit = () => {
-    this.props.history.push("/");
+    this.props.history.push("/dashboard");
   };
 
   render() {
     return (
-      <div>
-        <input placeholder="Username" value={this.state.email} />
-        <input placeholder="First Name" value={this.state.password} />
-        <input placeholder="Last Name" value={this.state.password} />
-        <input placeholder="Sex" value={this.state.password} />
-        <input placeholder="Birthday" value={this.state.password} />
-        <input placeholder="Height" value={this.state.password} />
-        <input placeholder="Weight" value={this.state.password} />
+      <div
+        className="registerContainer"
+      >
+        <input
+          className="registerField"
+          placeholder="Username"
+          value={this.state.email} />
+        <input
+          className="registerField"
+          placeholder="First Name" value={this.state.password} />
+        <input
+          className="registerField"
+          placeholder="Last Name" value={this.state.password} />
+        <input
+          className="registerField"
+          placeholder="Sex" value={this.state.password} />
+        <input
+          className="registerField"
+          placeholder="Birthday" value={this.state.password} />
+        <input
+          className="registerField"
+          placeholder="Height" value={this.state.password} />
+        <input
+          className="registerField"
+          placeholder="Weight" value={this.state.password} />
+        <button
+          className="signUpButton"
+          type="submit"
+          onClick={this.submit}>
+          Join FitFort!
+        </button>
       </div>
     );
   }

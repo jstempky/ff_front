@@ -7,14 +7,14 @@ import App from "./App";
 import NewSet from "./NewSet";
 import Login from "./Auth/Login"
 import Signup from "./Auth/SignUp"
-import Dashboard from "./Reports/Dashboard";
-import Graphs from "./Reports/Graphs";
-import Historic from "./Reports/Historic";
-import MaxReps from "./Reports/MaxReps";
-import Menu from "./Reports/Menu";
-import Social from "./Reports/Social";
-import NavBar from "./Reports/NavBar";
-import GraphDash from "./Reports/GraphDash";
+import Dashboard from "./Components/Dashboard";
+import Graphs from "./Components/Graphs";
+import Historic from "./Components/Historic";
+import MaxReps from "./Components/MaxReps";
+import UserMenu from "./Components/UserMenu";
+import Social from "./Components/Social";
+import NavBar from "./Components/NavBar";
+import GraphDash from "./Components/GraphDash";
 //import BarChart from "./Reports/BarChart"
 
 
@@ -36,6 +36,7 @@ const routing = (
           <Route path="/history" exact component={Historic} />
           <Route path="/maxreps" exact component={MaxReps} />
           <Route path="/social" exact component={Social} />
+          <Route path="/usermenu" exact component={UserMenu} />
         </Switch>
       </div>
     </Router>

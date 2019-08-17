@@ -12,7 +12,7 @@ h1, h3, li {
 table {
   border: solid white 2px;
   text-align: center;
-  width: 80%;
+  width: 90%;
   color: white;
 }
 
@@ -24,11 +24,19 @@ td, th {
   color: yellow;
   border: 1px dashed red;
   background-color: grey;
+  margin: 10px;
 }
 
 .dash_icon {
   height: 80px;
   margin: 10px;
+}
+
+.exerciseDropdown {
+  width: 70%;
+  font-size: 20px;
+  color: purple;
+  
 }
 
 /*  Hex yellow #FCEE21 */
@@ -49,6 +57,33 @@ td, th {
   width: 20px;
 }
 
+.friendsColumn {
+  margin: 10px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.friendEditDeleteIcon {
+  height: 80px;
+  width: auto;
+  margin: 8px;
+}
+
+.friendEditDeleteText {
+  font-size: 20px;
+}
+
+.friendDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
 .forgetPasswordButton {
   border-radius: 6px;
   height: 30px;
@@ -56,6 +91,19 @@ td, th {
   margin: 8px;
   color: red;
   font-weight: bold;
+}
+
+.friendPic {
+  height: 80px;
+  width: auto;
+  margin: 8px;
+  background-color: yellow;
+  border-radius: 6px;
+}
+.friendsPic {
+  height: 80px;
+  width: auto;
+  margin: 8px;
 }
 
 .graphContainer{
@@ -208,5 +256,35 @@ td, th {
   color: purple;
   font-weight: bold;
   font-size: 20px;
+}
 
+.socialDashContainer{
+  direction: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialDashIcon {
+  width: 140px;
+}
+
+.tableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userProfileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.userProfilePic {
+  height: 120px;
+  width: auto;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: yellow;
 }

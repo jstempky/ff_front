@@ -12,6 +12,19 @@ import icon_Social from "../resources/icon_Social.png";
 import logo from "../resources/logo.png";
 
 class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user_id: 1,
+      auth_token: "",
+      date: "4/20/2019",
+    }
+  }
+
+  componentDidMount(){
+    console.log(this);
+  }
+
   navigateToGraphDash = () => {
     this.props.history.push("/graphdash");
   };

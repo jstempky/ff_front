@@ -9,6 +9,12 @@ import circleGraph from "../resources/circleGraph.png";
 import "../App.css";
 
 class GraphDash extends Component {
+  
+
+  componentDidMount(){
+    console.log(this);
+  }
+
   navigateToTimeSeries =  () => {
     this.props.history.push("./graphs")
   }

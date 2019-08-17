@@ -7,44 +7,82 @@ class NewSet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Exercise: null,
-      Weight: null,
-      Reps: null
+      exercise: 'squat',
+      weight: null,
+      reps: null
     };
+
+    this.handleExChange = this.handleExChange.bind(this);
+    this.handleWeightChange = this.handleWeightChange.bind(this);
+    this.handleRepsChange = this.handleRepsChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  submit = () => {
-    this.props.history.push("/");
-  };
+  componentDidMount(){
 
-  navigateToSocial = () => {
-    this.props.history.push("/dashboard")
+  }
+
+  componentWillUnmount(){
+
+  }
+
+  handleExChange(event) {
+   this.setState({exercise: event.target.value});
+  }
+
+  handleWeightChange(event) {
+    this.setState({weight: event.target.value});
+  }
+
+  handleRepsChange(event) {
+    this.setState({reps: event.target.value});
+    console.log(this.state);
+  }
+
+  handleSubmit(event) {
+    alert( "Great Set!  " + this.state.exercise + " " + this.state.weight + "lbs for " + this.state.reps+ " reps");
+    event.preventDefault();
   }
 
   render() {
     return (
-      <div
+      <form
         className="newSetContainer"
       >
-        <input
-          className="newSetField"
-          placeholder="Exercise"
-          value={this.state.Exercise}
-        />
+
+        <select
+          className="exerciseDropdown"
+          value={this.state.exercise}
+          onChange={this.handleExChange}
+        >
+          <option value="squat">Squat</option>
+          <option value="bench press">Bench Press</option>
+          <option selected value="Deadlift">Deadlift</option>
+        </select>
+
         <input
           className="newSetField"
           placeholder="Weight"
-          value={this.state.Weight}
+          value={this.state.weight}
+          onChange={this.handleWeightChange}
         />
+
         <input
           className="newSetField"
           placeholder="Reps"
-          value={this.state.Reps}
+          value={this.state.reps}
+          onChange={this.handleRepsChange}
         />
-        <button type="submit" color="yellow" className="newSetSubmitButton" onClick={this.navigateToSocial}>
+
+        <button
+          type="submit"
+          color="yellow"
+          className="newSetSubmitButton"
+          onClick={this.handleSubmit}>
           Submit!
         </button>
-      </div>
+
+      </form>
     );
   }
 }

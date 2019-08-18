@@ -16,7 +16,7 @@ class NavBar extends Component {
   }
 
   showBurger = () => {
-    if (window.location.pathname === "/login" || window.location.pathname === "/signup") {
+    if (window.location.pathname === "/login" || window.location.pathname === "/signup"  || window.location.pathname ==="/forgotpw") {
       return (
         <div />
     );
@@ -30,6 +30,22 @@ class NavBar extends Component {
     }
   }
 
+  showLogo = () => {
+    if (window.location.pathname === "/login" || window.location.pathname === "/signup" || window.location.pathname ==="/forgotpw") {
+      return (
+        <div />
+    );
+    } else {
+      return (
+        <img
+          className="navbarIconStyle"
+          src={logo}
+          onClick={this.navigateToDash}
+        />
+      )
+    }
+  }
+
   render(){
     return (
         <div>
@@ -37,11 +53,8 @@ class NavBar extends Component {
             className="navBarContainerStyle"
           >
             {this.showBurger()}
-            <img
-              className="navbarIconStyle"
-              src={logo}
-              onClick={this.navigateToDash}
-            />
+            {this.showLogo()}
+
           </div>
         </div>
     )

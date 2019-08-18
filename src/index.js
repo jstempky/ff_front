@@ -17,6 +17,7 @@ import NavBar from "./Components/NavBar";
 import GraphDash from "./Components/GraphDash";
 import Friends from "./Components/Friends";
 import UserProfile from "./Components/UserProfile";
+import ForgotPassword from "./Auth/ForgotPassword";
 
 //import BarChart from "./Reports/BarChart"
 
@@ -32,6 +33,7 @@ const routing = (
           <Route path="/" exact component={App} />
           <Route path="/login" exact component={Login} />
           <Route path="/signup" exact component={Signup} />
+          <Route path="/forgotpw" exact component={ForgotPassword} />
           <Route path="/newset" exact component={NewSet} />
           <Route path="/dashboard" exact component={Dashboard} />
           <Route path="/graphs" exact component={Graphs} />

@@ -42,76 +42,80 @@ class Login extends Component {
   handleHeightChange(event) {this.setState({height: event.target.value});}
 
   handleSubmit(event) {
-    alert("Welcome to FitFort " + this.state.username + "!")
-    console.log(this.state)
+    alert("Welcome to FitFort " + this.state.username + "!");
+    console.log(this.state);
+    this.props.history.push("/dashboard");
   }
 
   render() {
     return (
-      <form
-        className="registerContainer"
-      >
-        <input
-          className="registerField"
-          placeholder="Email"
-          value={this.state.email}
-          onChange={this.handleEmailChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.handlePasswordChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Username"
-          value={this.state.username}
-          onChange={this.handleUsernameChange}
-        />
-        <input
-          className="registerField"
-          placeholder="First Name"
-          value={this.state.f_name}
-          onChange={this.handleFNameChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Last Name"
-          value={this.state.l_name}
-          onChange={this.handleLNameChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Sex"
-          value={this.state.sex}
-          onChange={this.handleSexChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Birthday"
-          value={this.state.bdate}
-          onChange={this.handleBDateChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Height"
-          value={this.state.height}
-          onChange={this.handleHeightChange}
-        />
-        <input
-          className="registerField"
-          placeholder="Weight"
-          value={this.state.weight}
-          onChange={this.handleWeightChange}
-        />
-        <button
-          className="signUpButton"
-          type="submit"
-          onClick={this.handleSubmit}>
-          Join FitFort!
-        </button>
-      </form>
+      <div>
+        <h1>Welcome to FitFort!</h1>
+        <form
+          className="registerContainer"
+        >
+          <input
+            className="registerField"
+            placeholder="Email"
+            value={this.state.email}
+            onChange={this.handleEmailChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Password"
+            value={this.state.password}
+            onChange={this.handlePasswordChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Username"
+            value={this.state.username}
+            onChange={this.handleUsernameChange}
+          />
+          <input
+            className="registerField"
+            placeholder="First Name"
+            value={this.state.f_name}
+            onChange={this.handleFNameChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Last Name"
+            value={this.state.l_name}
+            onChange={this.handleLNameChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Sex"
+            value={this.state.sex}
+            onChange={this.handleSexChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Birthday"
+            value={this.state.bdate}
+            onChange={this.handleBDateChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Height"
+            value={this.state.height}
+            onChange={this.handleHeightChange}
+          />
+          <input
+            className="registerField"
+            placeholder="Weight"
+            value={this.state.weight}
+            onChange={this.handleWeightChange}
+          />
+          <button
+            className="signUpButton"
+            type="submit"
+            onClick={this.handleSubmit}>
+            Join FitFort!
+          </button>
+        </form>
+      </div>
     );
   }
 }

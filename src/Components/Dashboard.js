@@ -9,7 +9,6 @@ import icon_Me from "../resources/icon_Me.png";
 import icon_Records from "../resources/icon_Records.png";
 import icon_NewSet from "../resources/icon_NewSet.png";
 import icon_Social from "../resources/icon_Social.png";
-import logo from "../resources/logo.png";
 
 class Dashboard extends Component {
   constructor(props) {

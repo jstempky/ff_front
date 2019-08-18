@@ -18,26 +18,13 @@ class NewSet extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount(){}
+  componentWillUnmount(){}
 
-  }
 
-  componentWillUnmount(){
-
-  }
-
-  handleExChange(event) {
-   this.setState({exercise: event.target.value});
-  }
-
-  handleWeightChange(event) {
-    this.setState({weight: event.target.value});
-  }
-
-  handleRepsChange(event) {
-    this.setState({reps: event.target.value});
-    console.log(this.state);
-  }
+  handleExChange(event) {this.setState({exercise: event.target.value});}
+  handleWeightChange(event) {this.setState({weight: event.target.value});}
+  handleRepsChange(event) {this.setState({reps: event.target.value});}
 
   handleSubmit(event) {
     alert( "Great Set!  " + this.state.exercise + " " + this.state.weight + "lbs for " + this.state.reps+ " reps");

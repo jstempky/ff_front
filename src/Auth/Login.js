@@ -10,6 +10,9 @@ class Login extends Component {
       email: null,
       password: null
     };
+
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
 
   navigateToDashboard = () => {
@@ -20,29 +23,36 @@ class Login extends Component {
     this.props.history.push("/signup");
   }
 
-  submit = () => {
-    this.props.history.push("/");
-  };
+  componentDidMount(){}
+  componentWillUnmount(){}
+
+  handleEmailChange(event) {this.setState({email: event.target.value})}
+  handlePasswordChange(event) {this.setState({password: event.target.value})}
+  handleSubmit(event) {this.props.history.push("/");};
 
   render() {
     return (
-      <div
+      <form
         className="loginContainer"
       >
         <input
           className="loginField"
-          placeholder="Email" value={this.state.email} />
+          placeholder="Email"
+          value={this.state.email}
+          onChange={this.handleEmailChange}
+        />
 
         <input
           className="loginField"
           placeholder="Password"
           type="password"
           value={this.state.password}
+          onChange={this.handlePasswordChange}
         />
         <button
           className="loginButton"
           type="submit"
-          onClick={this.navigateToDashboard}>
+          onClick={this.handleSubmit}>
           Login!
         </button>
         <button
@@ -54,10 +64,10 @@ class Login extends Component {
         <button
           className="signUpButton"
           type="submit"
-          onClick={this.navigateToSignUp}>
+          onClick={this.handleSubmit}>
           Join FitFort!
         </button>
-      </div>
+      </form>
     );
   }
 }

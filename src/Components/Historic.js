@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 import SetDetail from './SetDetail';
 
 
-import logo from "../resources/logo.png";
 import "../App.css";
 
 class History extends Component {
@@ -75,19 +74,7 @@ class History extends Component {
                 dateTime="8/12/19 5:30PM"
               />
             </table>
-            <h1
-              className="comment"
-              onClick={()=>console.log(this.state)}
-            >
-            Check Props- click</h1>
           </div>
-
-
-
-            <div className="comment">
-              <p>-Map over sets(remove multiple Set Details in historic component)</p>
-              <p>-Clean table formatting</p>
-            </div>
         </div>
       )
     }

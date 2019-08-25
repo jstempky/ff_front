@@ -9,7 +9,8 @@ class NewSet extends Component {
     this.state = {
       exercise: 'squat',
       weight: null,
-      reps: null
+      reps: null,
+      sets:[]
     };
 
     this.handleExChange = this.handleExChange.bind(this);
@@ -24,7 +25,9 @@ class NewSet extends Component {
 
   handleExChange(event) {this.setState({exercise: event.target.value});}
   handleWeightChange(event) {this.setState({weight: event.target.value});}
-  handleRepsChange(event) {this.setState({reps: event.target.value});}
+  handleRepsChange(event) {
+    this.setState({reps: event.target.value});
+  }
 
   handleSubmit(event) {
     alert( "Great Set!  " + this.state.exercise + " " + this.state.weight + "lbs for " + this.state.reps+ " reps");
@@ -42,9 +45,9 @@ class NewSet extends Component {
           value={this.state.exercise}
           onChange={this.handleExChange}
         >
-          <option value="squat">Squat</option>
+          <option selected value="squat">Squat</option>
           <option value="bench press">Bench Press</option>
-          <option selected value="Deadlift">Deadlift</option>
+          <option value="Deadlift">Deadlift</option>
         </select>
 
         <input
@@ -68,6 +71,10 @@ class NewSet extends Component {
           onClick={this.handleSubmit}>
           Submit!
         </button>
+        {this.state.exercise}
+        {this.state.weight}
+        {this.state.reps}
+        {this.state.sets[0]}
 
       </form>
     );

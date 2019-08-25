@@ -18,6 +18,8 @@ import GraphDash from "./Components/GraphDash";
 import Friends from "./Components/Friends";
 import UserProfile from "./Components/UserProfile";
 import ForgotPassword from "./Auth/ForgotPassword";
+import Settings from "./Components/Settings"
+import AddFriend from "./Components/AddFriend";
 
 //import BarChart from "./Reports/BarChart"
 
@@ -42,8 +44,11 @@ const routing = (
           <Route path="/maxreps" exact component={MaxReps} />
           <Route path="/social" exact component={Social} />
           <Route path="/usermenu" exact component={UserMenu} />
+          <Route path="/settings" exact component={Settings} />
+          <Route path="/addfriend" exact component={AddFriend} />
           <Route path="/friends" exact component={Friends} />
           <Route path="/userprofile" exact component={UserProfile} />
+
         </Switch>
       </div>
     </Router>

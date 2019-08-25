@@ -5,6 +5,27 @@ import logo from "../resources/logo.png";
 import "../App.css";
 
 class MaxReps extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedFriend: null,
+      selectedExercise: null,
+    };
+
+    this.handleSelectFriend = this.handleSelectFriend.bind(this);
+    this.handleSelectExercise = this.handleSelectExercise.bind(this);
+
+  }
+
+  componentDidMount(){}
+  componentWillUnmount(){}
+
+
+  handleSelectFriend(event) {this.setState({selectedFriend: event.target.value});}
+  handleSelectExercise(event) {this.setState({selectedExercise: event.target.value});}
+
+
+
   navigateToDashboard = () => {
     this.props.history.push("/dashboard");
   };
@@ -15,7 +36,18 @@ class MaxReps extends Component {
         <div
           className="maxRepsContainer"
         >
-          <h1>Deadlift</h1>
+          <input
+            className="searchFriendField"
+            placeholder="Friend"
+            value={this.state.selectedFriend}
+            onChange={this.handleSelectFriend}
+          />
+          <input
+            className="searchFriendField"
+            placeholder="Exercise"
+            value={this.state.selectedExercise}
+            onChange={this.handleSelectExercise}
+          />
           <table>
             <tr>
               <th>Rep</th>
@@ -63,21 +95,6 @@ class MaxReps extends Component {
               <td>4/20/19 4:16:40PM</td>
             </tr>
           </table>
-          <h1 className="pageTitle">
-            Max Reps!
-          </h1>
-          <h3 className="devToDoStyle">Needs:</h3>
-          <ul className="devToDoStyle">
-            <li>Max Reps table</li>
-            <li>Max Reps table, filter and view friend's data side by side</li>
-          </ul>
-          <div className="navBarStyle">
-            <img
-              className="directToDashButton"
-              onClick={this.navigateToDashboard}
-              src={logo}
-            />
-          </div>
         </div>
       )
     }

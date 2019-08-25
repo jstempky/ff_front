@@ -3,7 +3,7 @@ import {withRouter} from "react-router-dom";
 
 
 import logo from "../resources/logo.png";
-import hamburger from "../resources/Hamburger_icon.svg";
+import hamburger from "../resources/hamburger.svg";
 
 
 class NavBar extends Component {

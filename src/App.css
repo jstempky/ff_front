@@ -1,11 +1,11 @@
 html {
-  background-image: linear-gradient(150deg, #9E2D91, #664ACA);
+  background-image: linear-gradient(150deg, #9E2D91, #664ACA, navy);
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-h1, h3, li {
+h1, h2, h3, li {
   color: white;
   text-align: center;
 }
@@ -19,6 +19,15 @@ table {
 
 td, th {
   border: solid white 1px;
+}
+
+
+
+.addFriendContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 
 .comment {
@@ -37,6 +46,8 @@ td, th {
   width: 70%;
   font-size: 20px;
   color: purple;
+  text-indent: 5px;
+  margin-bottom: 6px;
 
 }
 
@@ -56,6 +67,15 @@ td, th {
 
 .directToDashButton {
   width: 20px;
+}
+
+
+.findFriendButton {
+  background-color: yellow;
+  font-size: 20px;
+  color: blue;
+  margin: auto;
+  border-radius: 6px;
 }
 
 .friendsColumn {
@@ -78,11 +98,11 @@ td, th {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: auto;
+  justify-content: space-between;
   color: white;
   font-size: 20px;
   text-align: center;
+  width: 100%;
 }
 
 .forgetPasswordButton {
@@ -93,6 +113,14 @@ td, th {
   font-weight: bold;
 }
 
+.friendsContainer{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .friendPic {
   height: 80px;
   width: auto;
@@ -100,6 +128,7 @@ td, th {
   background-color: yellow;
   border-radius: 6px;
 }
+
 .friendsPic {
   height: 80px;
   width: auto;
@@ -175,6 +204,14 @@ td, th {
   width: 100%;
 }
 
+.maxRepsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+}
+
 .navBarStyle {
   display: flex;
   padding-bottom: 6px;
@@ -221,13 +258,6 @@ td, th {
   margin: 20px;
 }
 
-.newSetSubmit {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-
-}
-
 .newSetSubmitButton {
   background-color: yellow;
   font-size: 20px;
@@ -237,12 +267,11 @@ td, th {
   width: auto;
 }
 
-.maxRepsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
+.personInfo {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .registerContainer {
@@ -262,33 +291,59 @@ td, th {
   font-size: 90%;
 }
 
+.searchFriends {
+  width: 70%;
+  padding:6px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.searchFriendsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.searchFriendField {
+  height: 30px;
+  width: 90%;
+  margin: 4px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 90%;
+}
+
 .signUpButton {
   border-radius: 6px;
-  height: auto;
+  height: 40px;
   width: 60%;
   margin: 8px;
   margin-top: 40px;
   color: purple;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   background-color: #fcee21;
   box-shadow: 0px 0px 4px #fff;
 }
 
 .socialDashContainer{
-  direction: flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .socialDashIcon {
-  width: 140px;
+  width: 120px;
 }
 
 .tableContainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .userProfileContainer {

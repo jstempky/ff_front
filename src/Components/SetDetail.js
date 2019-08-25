@@ -7,7 +7,8 @@ const SetDetail = (props) => {
   // );
   //
   return (
-      <tr>
+      <tr
+      >
         <td>{props.exercise}</td>
         <td>{props.weight}</td>
         <td>{props.reps}</td>

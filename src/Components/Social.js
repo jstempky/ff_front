@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 
 import friendsIcon from "../resources/friendsIcon.png";
+import addfriend from "../resources/addfriend.png";
 
 
 class Social extends Component {
@@ -13,6 +14,10 @@ class Social extends Component {
     this.props.history.push("/friends")
   }
 
+  navigateToAddFriend = () => {
+    this.props.history.push("/addfriend")
+  }
+
   render(){
     console.log(this.props)
     return(
@@ -20,16 +25,30 @@ class Social extends Component {
         className="socialDashContainer"
       >
         <h1>Social Dash</h1>
-        <img
-          className="socialDashIcon"
-          onClick={this.navigateToFriends}
-          src={friendsIcon}
-        />
-        <h3 className="comment">Needs:</h3>
-        <ul className="comment">
-          <li>Add Friend</li>
-          <li>Edit/Delete Friend</li>
-        </ul>
+        <figure>
+          <img
+            className="socialDashIcon"
+            onClick={this.navigateToFriends}
+            src={friendsIcon}
+          />
+          <figcaption
+            className="iconTitle"
+          >
+            Friends
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            className="socialDashIcon"
+            onClick={this.navigateToAddFriend}
+            src={addfriend}
+          />
+          <figcaption
+            className="iconTitle"
+          >
+            Add Friend
+          </figcaption>
+        </figure>
       </div>
     )
   }

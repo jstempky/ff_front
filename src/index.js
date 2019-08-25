@@ -19,6 +19,8 @@ import Friends from "./Components/Friends";
 import UserProfile from "./Components/UserProfile";
 import ForgotPassword from "./Auth/ForgotPassword";
 import Sets from "./Components/getSets";
+import Settings from "./Components/Settings";
+import AddFriend from "./Components/AddFriend";
 //import BarChart from "./Reports/BarChart"
 
 

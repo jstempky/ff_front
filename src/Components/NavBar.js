@@ -16,7 +16,9 @@ class NavBar extends Component {
   }
 
   showBurger = () => {
-    if (window.location.pathname === "/login" || window.location.pathname === "/signup"  || window.location.pathname ==="/forgotpw") {
+    if (window.location.pathname === "/login" ||
+    window.location.pathname === "/signup"  ||
+    window.location.pathname ==="/forgotpw") {
       return (
         <div />
     );
@@ -31,7 +33,9 @@ class NavBar extends Component {
   }
 
   showLogo = () => {
-    if (window.location.pathname === "/login" || window.location.pathname === "/signup" || window.location.pathname ==="/forgotpw") {
+    if (window.location.pathname === "/login" ||
+    window.location.pathname === "/signup" ||
+    window.location.pathname ==="/forgotpw") {
       return (
         <div />
     );

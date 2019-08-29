@@ -51,6 +51,11 @@ td, th {
 
 }
 
+.exerciseStyle, .repsStyle {
+  color: purple;
+  z-index: -3
+}
+
 /*  Hex yellow #FCEE21 */
 
 .iconTitle {
@@ -136,7 +141,8 @@ td, th {
 }
 
 .graphContainer{
-  padding: 10px;
+  padding: 6px;
+  margin: 10px;
 }
 
 .graphDashIcon {
@@ -153,7 +159,6 @@ td, th {
 }
 
 .graphStyle {
-  padding: 10px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 20px #fff;
@@ -237,7 +242,7 @@ td, th {
 }
 
 .navBarMenuStyle {
-  height:50px;
+  height:30px;
   border-radius: 10px;
   margin: 8px;
 }

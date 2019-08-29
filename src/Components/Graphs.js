@@ -21,18 +21,6 @@ class Graphs extends Component {
           <div className="graphContainer">
             <LineDemo />
           </div>
-          <div className="navBarStyle">
-            <img
-              className="directToDashButton"
-              onClick={this.navigateToDashboard}
-              src={logo}
-            />
-          </div>
-          <h3 className="devToDoStyle">Needs:</h3>
-          <ul className="devToDoStyle">
-            <li>Y: Weight, X: Time; Filters on exercise and rep</li>
-            <li>Alan's Circle Graphs</li>
-          </ul>
         </div>
       )
     }

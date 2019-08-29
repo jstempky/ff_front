@@ -5,7 +5,7 @@ const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
   datasets: [
     {
-      label: 'JStemp12 1RM',
+      label: 'JStemp12',
       fill: false,
       lineTension: 0.1,
       backgroundColor: 'purple',
@@ -25,7 +25,7 @@ const data = {
       pointHitRadius: 10,
       data: [135, 145, 165, 225, 205, 235, 255]
     }, {
-      label: 'JWalker 1RM',
+      label: 'JWalker',
       fill: false,
       lineTension: 0.1,
       backgroundColor: 'red',
@@ -73,8 +73,8 @@ export default class LineDemo extends Component {
   render() {
     return (
       <div className="graphStyle">
-        <h2>Squats</h2>
-        <h3>Reps: 1</h3>
+        <h2 className="exerciseStyle">Squats</h2>
+        <h3 className="repsStyle">Reps: 1</h3>
         <Line ref="chart" data={data} />
       </div>
     );

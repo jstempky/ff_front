@@ -52,7 +52,7 @@ class Dashboard extends Component {
     this.props.history.push("/social");
   };
 
-  
+
 
   render() {
     if (window.location.pathname==="/dashboard") {
@@ -69,7 +69,7 @@ class Dashboard extends Component {
             <figure>
               <img
                 className="dash_icon"
-                onClick={this.navigateToHistory}
+                onClick={this.navigateToSets}
                 src={icon_History}
               />
               <figcaption
@@ -98,15 +98,6 @@ class Dashboard extends Component {
               <img
                 className="dash_icon"
                 onClick={this.navigateToMaxReps}
-                src={icon_Records} />
-              <figcaption
-                className="iconTitle"
-              >Records</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="dash_icon"
-                onClick={this.navigateToSets}
                 src={icon_Records} />
               <figcaption
                 className="iconTitle"

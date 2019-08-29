@@ -71,11 +71,6 @@ class NewSet extends Component {
           onClick={this.handleSubmit}>
           Submit!
         </button>
-        {this.state.exercise}
-        {this.state.weight}
-        {this.state.reps}
-        {this.state.sets[0]}
-
       </form>
     );
   }

@@ -23,7 +23,7 @@ class History extends Component {
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillMount(){
+  componentDidMount(){
     // window.navigator.geolocation.getCurrentPosition(
     //   (position) => console.log(position),
     //   (err) => console.log(err)

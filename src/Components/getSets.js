@@ -4,20 +4,22 @@ import logo from "../resources/logo.png";
 import "../App.css";
 import axios from 'axios';
 
+import SetDetail from './SetDetail';
+
 class Sets extends Component {
   navigateToDashboard = () => {
     this.props.history.push("/dashboard");
   };
 
   state = {
-    persons: []
+    sets: []
   }
 
   componentDidMount() {
     axios.get(`https://cors-anywhere.herokuapp.com/https://fitfort.herokuapp.com/sets`)
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
+        const sets = res.data;
+        this.setState({ sets });
       })
   }
 
@@ -28,29 +30,35 @@ class Sets extends Component {
           className="setscontainer"
         >
            <ul>
-           <h1>Deadlift</h1>
+           <h1>All Sets</h1>
            <table>
            <tr>
-              <th>Rep</th>
-              <th>Record</th>
-              <th>Date</th>
+             <th>Exercise</th>
+             <th>Weight</th>
+             <th>Reps</th>
+             <th>Date</th>
+             <th>Location</th>
             </tr>
-            <tr>
-            { this.state.persons.map(person => <li>Rep: {person.set_id}, 
-            Amount of Reps: {person.reps}, Date: {person.set_datetime}</li>)}
-            </tr>
+            <SetDetail
+              exercise="Squat"
+              weight="135"
+              reps="12"
+              dateTime="8/12/19 5:30PM"
+            />
+            {this.state.sets.map(set => (
+              <tr>
+                <td>{set.ex_desc}</td>
+                <td>{set.weight}</td>
+                <td>{set.reps}</td>
+                <td>{set.set_datetime}</td>
+                <td>LA Fitness, Plymouth, MI</td>
+              </tr>
+            ))}
            </table>
       </ul>
           <h1 className="pageTitle">
             Rep's from Heroku
           </h1>
-          <div className="navBarStyle">
-            <img
-              className="directToDashButton"
-              onClick={this.navigateToDashboard}
-              src={logo}
-            />
-          </div>
         </div>
       )
     }
